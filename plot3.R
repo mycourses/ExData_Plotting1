@@ -1,6 +1,6 @@
 
 ## Load only the two relevant days into a data set
-hpc <- read.table("household_pw3_consumption.txt", sep=";",
+hpc <- read.table("household_power_consumption.txt", sep=";",
                   na.strings="?", header=FALSE, stringsAsFactors=FALSE,
                   skip=66637, nrow=2880)
 
