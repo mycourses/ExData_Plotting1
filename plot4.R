@@ -17,6 +17,7 @@ hpc$Timestamp <- strptime(ts, "%d/%m/%Y %H:%M:%S")
 
 
 ## Initialise the four plot layout
+png('plot4.png', width = 480, height = 480)
 par(mfcol=c(2, 2))
 
 ## Plot the time series line (from Plot 2) - Top left corner
@@ -38,5 +39,6 @@ title(xlab="datetime", ylab="Voltage")
 ## Plot the time series Global Reactive Power - Bottom right corner
 plot(hpc$Timestamp, hpc$Global_reactive_power, type="l", ann=FALSE)
 title(xlab="datetime", ylab="Global_reactive_power")
+dev.off()
 
 

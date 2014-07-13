@@ -16,12 +16,14 @@ ts <- paste(dt, tm)
 hpc$Timestamp <- strptime(ts, "%d/%m/%Y %H:%M:%S")
 
 ## Plot the time series lines (Plot 3)
+png('plot3.png', width = 480, height = 480)
 plot(hpc$Timestamp, hpc$Sub_metering_1, type="l", col="black", ann=FALSE)
 lines(hpc$Timestamp, hpc$Sub_metering_2, type="l", col="red")
 lines(hpc$Timestamp, hpc$Sub_metering_3, type="l", col="blue")
 title(ylab="Energy sub metering")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col=c("black", "red", "blue"), lty=1, lwd=2, cex=0.8)
+dev.off()
 
 
 

@@ -16,5 +16,7 @@ ts <- paste(dt, tm)
 hpc$Timestamp <- strptime(ts, "%d/%m/%Y %H:%M:%S")
 
 ## Plot the histogram (Plot 1)
+png('plot1.png', width = 480, height = 480)
 hist(hpc$Global_active_power, col="red", main="Global Active Power",
      xlab="Global Active Power (kilowatts)")
+dev.off()

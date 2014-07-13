@@ -16,5 +16,7 @@ ts <- paste(dt, tm)
 hpc$Timestamp <- strptime(ts, "%d/%m/%Y %H:%M:%S")
 
 ## Plot the time series line (Plot 2)
+png('plot2.png', width = 480, height = 480)
 plot(hpc$Timestamp, hpc$Global_active_power, type="l", ann=FALSE)
 title(ylab="Global Active Power (kilowatts)")
+dev.off()
